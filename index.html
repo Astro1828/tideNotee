@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TideNote Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <header class="site-header reveal">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">Tide<span>Note</span></a>
+      <nav class="nav-links">
+        <a href="#featured">Featured</a>
+        <a href="#writer">Write</a>
+        <a href="#stories">Stories</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <button class="btn btn-primary">Subscribe</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal">
+      <p class="eyebrow">Fresh perspectives, weekly</p>
+      <h1>The blog for makers and teams.</h1>
+      <p class="hero-copy">
+        Insights on design systems, product strategy, and practical engineering.
+        Built for readers who prefer depth over noise.
+      </p>
+      <div class="hero-meta">
+        <div>
+          <strong>42k+</strong>
+          <span>monthly readers</span>
+        </div>
+        <div>
+          <strong>3x</strong>
+          <span>weekly publishing</span>
+        </div>
+        <div>
+          <strong>12 min</strong>
+          <span>average read</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="featured reveal">
+      <article class="featured-card">
+        <span class="pill">Featured Story</span>
+        <h2>How blue-forward interfaces increase trust in content products</h2>
+        <p>
+          A practical breakdown of color, spacing, and motion decisions that
+          make modern blog experiences feel calmer and more premium.
+        </p>
+        <a class="text-link" href="#">Read featured article</a>
+      </article>
+      <aside class="mini-grid">
+        <article class="mini-card">
+          <p class="mini-label">Framework</p>
+          <h3>Writing with signal, not noise</h3>
+        </article>
+        <article class="mini-card">
+          <p class="mini-label">Case Study</p>
+          <h3>Rebuilding a docs site in two sprints</h3>
+        </article>
+      </aside>
+    </section>
+
+    <section id="writer" class="writer reveal">
+      <div class="writer-head">
+        <p class="eyebrow">Writer Desk</p>
+        <h2>Add a Blog or Article</h2>
+        <p>Use this form to publish a new story card instantly in the latest stories section.</p>
+      </div>
+      <form id="post-form" class="writer-form">
+        <div class="field-group">
+          <label for="post-title">Title</label>
+          <input id="post-title" name="post-title" type="text" placeholder="Your post title" required>
+        </div>
+        <div class="field-group">
+          <label for="post-type">Type</label>
+          <select id="post-type" name="post-type">
+            <option value="blog">Blog</option>
+            <option value="article">Article</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="post-category">Category</label>
+          <select id="post-category" name="post-category">
+            <option value="design">Design</option>
+            <option value="engineering">Engineering</option>
+            <option value="product">Product</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="post-readtime">Read Time</label>
+          <input id="post-readtime" name="post-readtime" type="text" placeholder="6 min read">
+        </div>
+        <div class="field-group full">
+          <label for="post-excerpt">Summary</label>
+          <textarea id="post-excerpt" name="post-excerpt" rows="3" placeholder="Short summary for the card" required></textarea>
+        </div>
+        <div class="field-group full">
+          <label for="post-content">Article Content</label>
+          <textarea id="post-content" name="post-content" rows="5" placeholder="Write the full blog/article text here..." required></textarea>
+        </div>
+        <div class="form-actions full">
+          <button class="btn btn-primary" type="submit">Publish Story</button>
+          <p id="form-note" class="form-note" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section id="stories" class="stories reveal">
+      <div class="section-top">
+        <h2>Latest Stories</h2>
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="engineering">Engineering</button>
+          <button class="filter-btn" data-filter="product">Product</button>
+        </div>
+      </div>
+      <div class="posts-grid" id="posts-grid"></div>
+    </section>
+
+    <section id="newsletter" class="newsletter reveal">
+      <div>
+        <p class="eyebrow">Newsletter</p>
+        <h2>Get practical stories every Tuesday.</h2>
+      </div>
+      <form class="newsletter-form" onsubmit="return false;">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+        <button class="btn btn-primary" type="submit">Join</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer reveal">
+    <div class="container footer-wrap">
+      <p>2026 TideNote. Built for modern readers.</p>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
